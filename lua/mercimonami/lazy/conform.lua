@@ -14,8 +14,18 @@ return {
         yaml = { "prettierd" },
         php = {},
       },
-      -- This disables fallback to LSP for all files; you can also do this per-filetype
+      -- Completely disable fallback to LSP
       lsp_fallback = false,
+
+      -- Disable Conform's internal LSP formatter
+      formatters = {
+        lsp = {
+          condition = function()
+            return false
+          end,
+        },
+      },
     },
   },
 }
+

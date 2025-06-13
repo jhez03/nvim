@@ -1,8 +1,8 @@
 <?php
 
-class test 
-{
+class test {
       public function test {
     echo 'test';
 }
+        sdfsd
 }

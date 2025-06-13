@@ -9,14 +9,14 @@ return {
       vim.g.nvim_phpcs_config_phpcbf_path = "phpcbf"
       vim.g.nvim_phpcs_config_phpcs_standard = vim.fn.getcwd() .. "/phpcs.xml.dist" -- or path to your ruleset phpcs.xml
 
-      -- Setup auto formatting for php files using phpcs
-      vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
-        group = "PHPCSGroup",
-        pattern = "*.php",
-        callback = function()
-          require("phpcs").cs()
-        end,
-      })
+      -- -- Setup auto formatting for php files using phpcs
+      -- vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
+      --   group = "PHPCSGroup",
+      --   pattern = "*.php",
+      --   callback = function()
+      --     require("phpcs").cs()
+      --   end,
+      -- })
       vim.api.nvim_create_autocmd("BufWritePost", {
         group = "PHPCSGroup",
         pattern = "*.php",

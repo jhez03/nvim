@@ -21,4 +21,7 @@ return {
       },
     },
   },
+
+  -- Copilot chat
+
 }
