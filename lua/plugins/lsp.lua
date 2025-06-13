@@ -18,26 +18,6 @@ return {
             },
           },
         },
-        intelephense = {
-          filetypes = { "php" },
-          init_options = {
-            format = {
-              enable = false,
-            },
-          },
-        },
-      },
-      setup = {
-        intelephense = function(_, opts)
-          local orig_on_attach = opts.on_attach
-          opts.on_attach = function(client, bufnr)
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-            if orig_on_attach then
-              orig_on_attach(client, bufnr)
-            end
-          end
-        end,
       },
       capabilities = (function()
         local capabilities = vim.lsp.protocol.make_client_capabilities()

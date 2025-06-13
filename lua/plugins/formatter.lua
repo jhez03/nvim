@@ -12,7 +12,6 @@ return {
         scss = { "prettierd" },
         yml = { "prettierd" },
         yaml = { "prettierd" },
-        php = {},
       },
       -- This disables fallback to LSP for all files; you can also do this per-filetype
       lsp_fallback = false,

@@ -7,7 +7,8 @@ function test()
   $c = 3;
 
   if ($a < $b) {
-    echo "a is less than b\n";
+    sfdsd
+                            echo "a is less than b\n";
   } elseif ($b < $c) {
     echo "b is less than c\n";
   } else {
